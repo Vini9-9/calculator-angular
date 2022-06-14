@@ -1,0 +1,26 @@
+<p>calculadora works!</p>
+
+<div id="calculadora">
+    <div id="display">
+        <b>
+            {{display}}
+        </b>
+    </div>
+    <div id="botoes">
+        <button (click)="limparMemoria()">AC</button>
+        <button (click)="setOperacao('/')">/</button>
+        <!-- 7, 8, 9 -->
+        <button (click)="setOperacao('x')">x</button>
+        <!-- 4, 5, 6 -->
+        <button (click)="setOperacao('-')">-</button>
+        <!-- 1, 2, 3 -->
+        <button (click)="setOperacao('+')">+</button>
+        <button (click)="addDigito($event.target)">1</button>
+        <button (click)="addDigito($event.target)">0</button>
+        <button (click)="addDigito($event.target)">.</button>
+        <button (click)="setOperacao('=')">=</button>
+    </div>
+</div>
+
+<!-- for -->
+<!-- <button (click)="addDigito($event.target)">num[i]</button> -->
