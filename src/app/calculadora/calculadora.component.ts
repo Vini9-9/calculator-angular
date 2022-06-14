@@ -9,11 +9,13 @@ export class CalculadoraComponent implements OnInit {
   display: string;
   operacao: String;
   total: number;
+  permitNewNumber: boolean; 
 
   constructor() { 
     this.display = '0';
     this.operacao = '';
     this.total = 0;
+    this.permitNewNumber = false;
   }
 
   ngOnInit(): void {
@@ -26,7 +28,7 @@ export class CalculadoraComponent implements OnInit {
       return
     } 
 
-    if(this.display == '0'){
+    if(this.display == '0' || this.permitNewNumber){
       this.display = digito;
     } else {
       this.display = this.display + digito;
@@ -51,7 +53,7 @@ export class CalculadoraComponent implements OnInit {
   saveOperacao(operacao: string) {
     this.operacao = operacao;
     this.total = parseFloat(this.display);
-    this.display = '0';
+    this.permitNewNumber = true;
   }
 
   showResult() {
