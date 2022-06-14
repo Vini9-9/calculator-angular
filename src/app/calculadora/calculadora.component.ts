@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CalculadoraComponent implements OnInit {
   display: string;
+  operacao: String;
+  total: number;
 
   constructor() { 
     this.display = '0';
+    this.operacao = '';
+    this.total = 0;
   }
 
   ngOnInit(): void {
@@ -31,10 +35,27 @@ export class CalculadoraComponent implements OnInit {
 
   limparMemoria() {
     this.display = '0';
+    this.operacao = '';
   }
 
-  setOperacao(operacao: String) {
-    window.alert('Set operação: ' + operacao);
+  setOperacao(operacao: string) {
+    
+    if(operacao.includes('=')) {
+      this.total = eval(` ${this.total} ${this.operacao} ${this.display}`);
+      this.showResult();
+      return
+    }
+    this.saveOperacao(operacao);
+  }
+
+  saveOperacao(operacao: string) {
+    this.operacao = operacao;
+    this.total = parseFloat(this.display);
+    this.display = '0';
+  }
+
+  showResult() {
+    this.display = `${this.total}`;
   }
 
 }
