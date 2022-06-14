@@ -16,8 +16,11 @@ export class CalculadoraComponent implements OnInit {
   }
 
   addDigito(botao:any) {
-    // window.alert('add Digito: ' + digito.textContent);
     const digito: string = botao.textContent;
+
+    if(digito.includes('.') && this.display.includes('.')){
+      return
+    } 
 
     if(this.display == '0'){
       this.display = digito;
