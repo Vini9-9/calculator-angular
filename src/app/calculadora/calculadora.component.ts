@@ -9,7 +9,7 @@ export class CalculadoraComponent implements OnInit {
   display: string;
   operacao: string;
   total: number;
-  permitNewNumber: boolean; 
+  permitNewNumber: boolean;
 
   constructor() { 
     this.display = '0';
@@ -30,6 +30,7 @@ export class CalculadoraComponent implements OnInit {
 
     if(this.display == '0' || this.permitNewNumber){
       this.display = digito;
+      this.permitNewNumber = false;
     } else {
       this.display = this.display + digito;
     }
