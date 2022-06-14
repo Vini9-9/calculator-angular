@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CalculadoraComponent implements OnInit {
   display: string;
-  operacao: String;
+  operacao: string;
   total: number;
   permitNewNumber: boolean; 
 
@@ -43,7 +43,6 @@ export class CalculadoraComponent implements OnInit {
   setOperacao(operacao: string) {
     
     if(operacao.includes('=')) {
-      this.total = eval(` ${this.total} ${this.operacao} ${this.display}`);
       this.showResult();
       return
     }
@@ -57,6 +56,7 @@ export class CalculadoraComponent implements OnInit {
   }
 
   showResult() {
+    this.total = eval(` ${this.total} ${this.operacao} ${this.display}`);
     this.display = `${this.total}`;
   }
 
