@@ -1,0 +1,33 @@
+#calculadora {
+    margin: auto;
+    width: 30%;
+    border: 3px solid black;
+    padding: 10px;
+}
+
+#display {
+    margin: auto;
+    border: 3px solid black;
+    padding: 10px;
+    text-align: right;
+    font-size: 50px;
+}
+
+input#AC {
+    width: 95%;
+}
+
+input#equal {
+    width: 95%;
+}
+
+input {
+    height: 70px;
+    width: 80px;
+    border: 0;
+    border-radius: 30px;
+    margin: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 200ms ease;
+}

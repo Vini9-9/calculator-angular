@@ -1,24 +1,40 @@
-<p>calculadora works!</p>
-
 <div id="calculadora">
     <div id="display">
         <b>
             {{display}}
         </b>
     </div>
-    <div id="botoes">
-        <button (click)="limparMemoria()">AC</button>
-        <button (click)="setOperacao('/')">/</button>
-        <!-- 7, 8, 9 -->
-        <button (click)="setOperacao('*')">x</button>
-        <!-- 4, 5, 6 -->
-        <button (click)="setOperacao('-')">-</button>
-        <!-- 1, 2, 3 -->
-        <button (click)="setOperacao('+')">+</button>
-        <button (click)="addDigito($event.target)">1</button>
-        <button (click)="addDigito($event.target)">0</button>
-        <button (click)="addDigito($event.target)">.</button>
-        <button (click)="setOperacao('=')">=</button>
+    <div class="botoes">
+        <table>
+            <tr>
+                <td colspan="3"><input type="button" (click)="limparMemoria()" value="AC" id="AC"></td>
+                <td><input type="button" (click)="setOperacao('/')" value="/"></td>
+            </tr>
+            <tr>
+                <td><input type="button" (click)="addDigito($event.target)" value="7"></td>
+                <td><input type="button" (click)="addDigito($event.target)" value="8"></td>
+                <td><input type="button" (click)="addDigito($event.target)" value="9"></td>
+                <td><input type="button" (click)="setOperacao('*')" value="x"></td>
+            </tr>
+            <tr>
+                <td><input type="button" (click)="addDigito($event.target)" value="4"></td>
+                <td><input type="button" (click)="addDigito($event.target)" value="5"></td>
+                <td><input type="button" (click)="addDigito($event.target)" value="6"></td>
+                <td><input type="button" (click)="setOperacao('-')" value="-"></td>
+            </tr>
+            <tr>
+                <td><input type="button" (click)="addDigito($event.target)" value="1"></td>
+                <td><input type="button" (click)="addDigito($event.target)" value="2"></td>
+                <td><input type="button" (click)="addDigito($event.target)" value="3"></td>
+                <td><input type="button" (click)="setOperacao('+')" value="+"></td>
+            </tr>
+            <tr>
+                <td><input type="button" (click)="addDigito($event.target)" value="0"></td>
+                <td><input type="button" (click)="addDigito($event.target)" value="."></td>
+                <td colspan="2"><input type="button" (click)="setOperacao('=')" value="=" id="equal"></td>
+            </tr>
+        </table>        
+        
     </div>
 </div>
 

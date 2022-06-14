@@ -20,7 +20,7 @@ export class CalculadoraComponent implements OnInit {
   }
 
   addDigito(botao:any) {
-    const digito: string = botao.textContent;
+    const digito: string = botao.value;
 
     if(digito.includes('.') && this.display.includes('.')){
       return
