@@ -36,6 +36,20 @@ input.btn-operator{
     color: black;
 }
 
+input#AC:focus {
+    background-color: #bd3740;
+    color: #ffffff;
+}
+
+input.btn-operator:focus{
+    background-color: #e0770d;
+    color: #ffffff;
+}
+
+input#equal:focus{
+    background-color: #13871a;
+}
+
 input {
     height: 70px;
     width: 80px;
