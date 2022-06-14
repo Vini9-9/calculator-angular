@@ -7,7 +7,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - [X] clear memory;
 - [X] set digit;
 - [X] save operation;
-- [] style;
+- [X] style dark mode;
 
 
 ## Development server

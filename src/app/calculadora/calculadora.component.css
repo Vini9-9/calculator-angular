@@ -3,22 +3,37 @@
     width: 30%;
     border: 3px solid black;
     padding: 10px;
+    background-color: #071115;
 }
 
 #display {
     margin: auto;
-    border: 3px solid black;
     padding: 10px;
     text-align: right;
     font-size: 50px;
+    color: #f8fafb;
 }
 
 input#AC {
+    background-color: #2d191e;
+    color: #bd3740;
     width: 95%;
 }
 
 input#equal {
+    background-color: #223323;
+    color: #ffffff;
     width: 95%;
+}
+
+input.btn-number{
+    background-color: #1b2f38;
+    color: #f8fafb;
+}
+
+input.btn-operator{
+    background-color: #c46c14a9;
+    color: black;
 }
 
 input {
