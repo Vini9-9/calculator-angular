@@ -1,4 +1,4 @@
-# AulaAngular
+# Calculator Dark Mode - Angular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.1.
 
@@ -9,6 +9,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - [X] save operation;
 - [X] style dark mode;
 
+## Demo
+
+![image](https://user-images.githubusercontent.com/58668142/173639831-b5936f0d-2f72-4666-8adb-5bb02a9006b4.png)
 
 ## Development server
 
