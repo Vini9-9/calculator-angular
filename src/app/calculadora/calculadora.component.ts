@@ -42,23 +42,18 @@ export class CalculadoraComponent implements OnInit {
   }
 
   setOperacao(operacao: string) {
-    
-    if(operacao.includes('=')) {
-      this.showResult();
-      return
-    }
-    this.saveOperacao(operacao);
-  }
-
-  saveOperacao(operacao: string) {
     this.operacao = operacao;
     this.total = parseFloat(this.display);
     this.permitNewNumber = true;
   }
 
   showResult() {
-    this.total = eval(` ${this.total} ${this.operacao} ${this.display}`);
-    this.display = `${this.total}`;
+    if(this.operacao != ''){
+      this.total = eval(` ${this.total} ${this.operacao} ${this.display}`);
+      this.display = `${this.total}`;
+      this.operacao = ''
+      this.permitNewNumber = true;
+    }
   }
 
 }
